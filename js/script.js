@@ -22,6 +22,18 @@ var prop = {
 		};
 jQuery(document).ready(function(){
 	$("#tachimetro").myfunc(prop);
+	setInterval(function(){ 
+		$.ajax({
+		    url:"getvalue.php",  
+		    success:function(data) {
+		      /*Cicliamo l'array di data e chiamiamo thespeed*/
+		    	
+		    }
+		  }); 
+		var random = Math.floor(Math.random() * (prop.maxVal - 0 + 1)) + 0;
+		thespeed(random);
+	}, 1000);
+	
 });
 
 function thespeed(theSpeed){   
