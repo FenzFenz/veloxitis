@@ -13,6 +13,12 @@
 
     <!-- Bootstrap core CSS -->
     <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Speedometer CSS -->
+    <link href="libs/speedometer/css/speedometer.css" rel="stylesheet">
+    
+    <!-- style CSS -->
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -34,60 +40,35 @@
           </button>
           <a class="navbar-brand" href="#">Veloxitis</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-<!--             <li><a href="#">Settings</a></li> -->
-<!--             <li><a href="#">Profile</a></li> -->
-<!--             <li><a href="#">Help</a></li> -->
-          </ul>
-        </div>
       </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 30px;">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
-          <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#Id</th>
-                  <th>Velocit&agrave; rilevata</th>
-                  <th>Data</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>150 km / h</td>
-                  <td>18/06/2016</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="col-xs-12 main">
+        	<h1 class="page-header">Display</h1>
+        	<div class="center" style="margin: 0 auto;">
+        		<div id="tachimetro" class="tachimetro"></div>
+        	</div>
+<!--           <h2 class="sub-header">Section title</h2> -->
+<!--           <div class="table-responsive"> -->
+<!--             <table class="table table-striped"> -->
+<!--               <thead> -->
+<!--                 <tr> -->
+<!--                   <th>#Id</th> -->
+<!--                   <th>Velocit&agrave; rilevata</th> -->
+<!--                   <th>Data</th> -->
+<!--                 </tr> -->
+<!--               </thead> -->
+<!--               <tbody> -->
+<!--                 <tr> -->
+<!--                   <td>1</td> -->
+<!--                   <td>150 km / h</td> -->
+<!--                   <td>18/06/2016</td> -->
+<!--                 </tr> -->
+<!--               </tbody> -->
+<!--             </table> -->
+<!--           </div> -->
         </div>
       </div>
     </div>
@@ -97,5 +78,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Speedometer -->
+    <script src="libs/speedometer/js/speedometer.js"></script>
+    
+    <script src="js/script.js"></script>
+    
   </body>
 </html>
