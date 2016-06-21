@@ -27,7 +27,7 @@ while($riga = mysql_fetch_array($ris)){
 	//$velox = array ($t_speed =>"km");
 	
 	/*Andrebbe fatto cosi*/
-	$velox[] = array("speed"=>$t_speed, "speed_unit", "km/h");
+	$velox[] = array("speed"=>$t_speed, "speed_unit" => "km/h");
 	
 }
 	echo json_encode($velox);
