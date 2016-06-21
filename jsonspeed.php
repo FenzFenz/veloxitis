@@ -19,18 +19,23 @@ if(! $ris )
 $velox = array();
 
 while($riga = mysql_fetch_array($ris)){
-	$temp_1 = $riga['time_1']/1000;
-	$temp_2 = $riga['time_2']/1000;
-	$t_speed = (10/ ($temp_2-$temp_1))/100;
 	
+// 	$temp_1 = $riga['time_1']/1000;
+// 	$temp_2 = $riga['time_2']/1000;
+// 	$t_speed = (10/ ($temp_2-$temp_1))/100;
+	$diff = $riga['time_2']-$riga['time_1'];
+		
+	$t_speed = ((1/100) / ($diff/1000));
 	/*Questo e` quello che hai scritto tu*/
 	//$velox = array ($t_speed =>"km");
 	
 	/*Andrebbe fatto cosi*/
-	$velox[] = array("speed"=>$t_speed, "speed_unit" => "km/h");
+	$velox[] = array("speed"=>$t_speed, "speed_unit" => "m/s");
 	
 }
-	echo json_encode($velox);
+
+header('Content-Type: application/json');
+echo json_encode($velox);
 	
 	
 	
