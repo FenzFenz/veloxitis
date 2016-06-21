@@ -4,7 +4,7 @@ $conn = mysql_connect("localhost","veloxitis") or die('impossibile connettersi :
 
 $db = mysql_select_db("my_veloxitis") or die('impossibile connettersi al database : ' . mysql_error());
 
-$str_sql = "SELECT time_1, time_2 FROM vi_speed WHERE detected==false";
+$str_sql = "SELECT time_1, time_2 FROM vi_speed WHERE detected=0";
 
 $ris = mysql_query($str_sql, $conn);
 
@@ -26,4 +26,3 @@ while($riga = mysql_fetch_array($ris)){
 	
 	
 	
-}
