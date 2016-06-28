@@ -70,27 +70,6 @@
 						</table>
 					</div>
 				</div>
-				<div class="col-xs-12">
-					<div class="table-responsive">
-						<span class="cruscotto risultati"></span>
-						<table class="table">
-							<thead>
-								<tr>
-									<th>Tempo 1</th>
-									<th>Tempo 2</th>
-									<th>Velocit&agrave;</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
         </div>
     </div>
 

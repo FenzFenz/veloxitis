@@ -39,7 +39,7 @@ jQuery(document).ready(function(){
 		    				thespeed(data.speed);
 		    				$("#time_1").html(data.time_1);
 		    				$("#time_2").html(data.time_2);
-		    				$("#speed").html(data.speed);
+		    				$("#speed").html(data.speed + " km/h");
 		    			}
 		    			localStorage.setItem("lastId", data.id);
 		    			$.ajax({
