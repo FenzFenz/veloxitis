@@ -2,3 +2,17 @@
 #speedometerWraper-tachimetro .envelope{
 	margin: 0 auto;
 }
+
+.cruscotto:after{
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Cruscotto";
+}
+.risultati:after{
+	content: "Risultati";
+}

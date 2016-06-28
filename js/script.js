@@ -20,21 +20,42 @@ var prop = {
 			noOfSmallDiv: 2,   // no of small div between main div
 			eventListenerType   : 'change',// no of small div between main div
 		};
+
+localStorage.setItem("lastId", 0);
+//thespeed(0);
 jQuery(document).ready(function(){
 	$("#tachimetro").myfunc(prop);
-	$.ajax({
-	    url:"jsonspeed.php",  
-	    success:function(data) {
-	    	/*Cicliamo l'array di data e chiamiamo thespeed*/
-	    	$.each(data, function(i, item) {
-	    		thespeed(data[0].speed);
-	    	});
-	    }
-	});
-	setTimeout(function(){
-		thespeed(0);
-	}, 3000);
-	jQuery(".speedNobe").append("<div>aaaaaaaaaaaaaaaaaaa</div>");
+	
+	setInterval(function(){
+		$.ajax({
+		    url:"jsonspeed.php",
+		    data: {last_id: localStorage.lastId},
+		    success:function(data) {
+		    	if(typeof data !=="undefined" && data != ""){
+		    		
+//		    		lastId = data.id;
+		    		if(typeof data.id !=="undefined"){
+		    			if(localStorage.lastId !=0){
+		    				thespeed(data.speed);
+		    				$("#time_1").html(data.time_1);
+		    				$("#time_2").html(data.time_2);
+		    				$("#speed").html(data.speed);
+		    			}
+		    			localStorage.setItem("lastId", data.id);
+		    			$.ajax({
+						    url:"updaterow.php",
+						    data: {id: data.id},
+						    success:function(data2) {
+						    	setTimeout(function(){
+						    		thespeed(0);
+						    	}, 3000);
+						    }
+						});
+		    		}
+		    	}
+		    }
+		});
+	}, 1000);
 });
 
 function thespeed(theSpeed){   

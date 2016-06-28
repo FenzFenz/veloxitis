@@ -44,33 +44,54 @@
     </nav>
 
     <div class="container-fluid" style="margin-top: 30px;">
-      <div class="row">
-        <div class="col-xs-12 main">
+        <div class="main">
         	<h1 class="page-header">Display</h1>
-        	<div class="center" style="margin: 0 auto;">
+        	<div class="center col-xs-12 col-sm-6 col-md-5" style="margin: 0 auto;">
         		<div id="tachimetro" class="tachimetro"></div>
         	</div>
-<!--           <h2 class="sub-header">Section title</h2> -->
-<!--           <div class="table-responsive"> -->
-<!--             <table class="table table-striped"> -->
-<!--               <thead> -->
-<!--                 <tr> -->
-<!--                   <th>#Id</th> -->
-<!--                   <th>Velocit&agrave; rilevata</th> -->
-<!--                   <th>Data</th> -->
-<!--                 </tr> -->
-<!--               </thead> -->
-<!--               <tbody> -->
-<!--                 <tr> -->
-<!--                   <td>1</td> -->
-<!--                   <td>150 km / h</td> -->
-<!--                   <td>18/06/2016</td> -->
-<!--                 </tr> -->
-<!--               </tbody> -->
-<!--             </table> -->
-<!--           </div> -->
+        	<div class="col-xs-12 col-sm-6 col-md-7">
+					<div class="table-responsive">
+						<span class="cruscotto"></span>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Tempo 1</th>
+									<th>Tempo 2</th>
+									<th>Velocit&agrave;</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td id="time_1">0</td>
+									<td id="time_2">0</td>
+									<td id="speed">0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="table-responsive">
+						<span class="cruscotto risultati"></span>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Tempo 1</th>
+									<th>Tempo 2</th>
+									<th>Velocit&agrave;</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Table cell</td>
+									<td>Table cell</td>
+									<td>Table cell</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
         </div>
-      </div>
     </div>
 
     <!-- Bootstrap core JavaScript
