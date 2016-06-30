@@ -1,7 +1,7 @@
 var prop = {
-			maxVal  : 180, // Max value of the meter
-			divFact : 10,  // Division value of the meter
-			dangerLevel : 120, // more than this leval, color will be red
+			maxVal  : 10, // Max value of the meter
+			divFact : 1,  // Division value of the meter
+			dangerLevel : 10, // more than this leval, color will be red
 			initDeg : -45, // reading begins angle
 			maxDeg  : 270, // total angle of the meter reading
 			edgeRadius  : 150, // radius of the meter circle
@@ -22,10 +22,9 @@ var prop = {
 		};
 
 localStorage.setItem("lastId", 0);
-//thespeed(0);
 jQuery(document).ready(function(){
 	$("#tachimetro").myfunc(prop);
-	
+	thespeed(0);	
 	setInterval(function(){
 		$.ajax({
 		    url:"jsonspeed.php",
