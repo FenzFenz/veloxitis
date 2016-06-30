@@ -33,23 +33,26 @@ jQuery(document).ready(function(){
 		    	if(typeof data !=="undefined" && data != ""){
 		    		
 //		    		lastId = data.id;
-		    		if(typeof data.id !=="undefined"){
-		    			if(localStorage.lastId !=0){
+		    		if(typeof data.id !=="undefined" && data.id !=0){
+		    			if(localStorage.lastId == 0){
+		    				localStorage.setItem("lastId", data.id);
+		    			}else{
 		    				thespeed(data.speed);
-		    				$("#time_1").html(data.time_1);
-		    				$("#time_2").html(data.time_2);
+		    				$("#time_1").html(data.time_1 + " ms");
+		    				$("#time_2").html(data.time_2 + " ms");
 		    				$("#speed").html(data.speed + " km/h");
+		    				$("#date").html(data.date);
+		    				localStorage.setItem("lastId", data.id);
+		    				$.ajax({
+							    url:"updaterow.php",
+							    data: {id: data.id},
+							    success:function(data2) {
+							    	setTimeout(function(){
+							    		thespeed(0);
+							    	}, 3000);
+							    }
+							});
 		    			}
-		    			localStorage.setItem("lastId", data.id);
-		    			$.ajax({
-						    url:"updaterow.php",
-						    data: {id: data.id},
-						    success:function(data2) {
-						    	setTimeout(function(){
-						    		thespeed(0);
-						    	}, 3000);
-						    }
-						});
 		    		}
 		    	}
 		    }

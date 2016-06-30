@@ -55,9 +55,10 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th>Tempo 1</th>
-									<th>Tempo 2</th>
+									<th>Tempo Sensore 1</th>
+									<th>Tempo Sensore 2</th>
 									<th>Velocit&agrave;</th>
+									<th>Data</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -65,6 +66,7 @@
 									<td id="time_1">0</td>
 									<td id="time_2">0</td>
 									<td id="speed">0</td>
+									<td id="date">0</td>
 								</tr>
 							</tbody>
 						</table>
