@@ -43,15 +43,9 @@ jQuery(document).ready(function(){
 		    				$("#speed").html(data.speed + " km/h");
 		    				$("#date").html(data.date);
 		    				localStorage.setItem("lastId", data.id);
-		    				$.ajax({
-							    url:"updaterow.php",
-							    data: {id: data.id},
-							    success:function(data2) {
-							    	setTimeout(function(){
-							    		thespeed(0);
-							    	}, 3000);
-							    }
-							});
+		    				setTimeout(function(){
+					    		thespeed(0);
+					    	}, 3000);
 		    			}
 		    		}
 		    	}
